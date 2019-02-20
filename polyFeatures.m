@@ -16,7 +16,10 @@ X_poly = zeros(numel(X), p);
 % 
 
 
-
+for i = 1:p
+  % Compute train/cross validation errors using training examples
+  X_poly(:,i) = X.^i;
+end
 
 
 

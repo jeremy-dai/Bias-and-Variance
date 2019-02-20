@@ -21,10 +21,9 @@ grad = zeros(size(theta));
 
 
 
+J = 1 / 2 / m * sum((X * theta - y) .^2) + lambda / 2 / m * (theta'*theta - theta(1)^2)
 
-
-
-
+grad = ((X * theta - y)' * X)' /m + lambda / m * [0;theta(2:end)]
 
 
 
